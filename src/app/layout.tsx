@@ -34,6 +34,25 @@ export const metadata: Metadata = {
 	},
 };
 
+// Google Analytics Script Component
+const GoogleAnalytics = () => {
+	return (
+		<>
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-XXXXXXXXXX');
+					`,
+				}}
+			/>
+		</>
+	);
+};
+
 export default function RootLayout({
 	children,
 }: {
@@ -41,7 +60,16 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<head></head>
+			<head>
+				{/* Google Search Console Verification */}
+				<meta name="google-site-verification" content="YOUR-VERIFICATION-CODE" />
+
+				{/* Google AdSense */}
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossOrigin="anonymous"></script>
+
+				{/* Google Analytics */}
+				<GoogleAnalytics />
+			</head>
 			<body className={inter.className} suppressHydrationWarning>
 				<div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
 					<Navigation />
