@@ -45,8 +45,8 @@ export default function AboutPage() {
 							resizing tool - one that would be fast, secure, and
 							completely free. We believe that everyone should
 							have access to professional-grade image optimization
-							tools, whether you're a student working on a project
-							or a business optimizing your website.
+							tools, whether you&apos;re a student working on a
+							project or a business optimizing your website.
 						</p>
 						<p>
 							Today, ResizeIt processes millions of images every
@@ -73,10 +73,10 @@ export default function AboutPage() {
 									</h3>
 								</div>
 								<p className='text-slate-600'>
-									Every decision we make is guided by what's
-									best for our users. We prioritize
-									simplicity, speed, and reliability above all
-									else.
+									Every decision we make is guided by
+									what&apos;s best for our users. We
+									prioritize simplicity, speed, and
+									reliability above all else.
 								</p>
 							</CardContent>
 						</Card>
